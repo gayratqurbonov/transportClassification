@@ -10,7 +10,7 @@ if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
 st.subheader("Test dastur")
-st.write("This app is to increase your productivity.")
+st.write("Transportni klassifikatsiya qiluvchi dastur")
 
 
 # rasmni joylash
