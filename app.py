@@ -7,11 +7,11 @@ import platform
 plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
-# title
+# Title
 st.title('Transportni klassifikatsiya qiluvchi model')
 
 
-# rasmni joylash
+# Rasmni joylash
 file = st.file_uploader('Rasm yuklash', type=['png', 'jpeg', 'gif', 'svg'])
 if file:
     st.image(file)
