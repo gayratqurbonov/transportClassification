@@ -9,6 +9,7 @@ if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
+st.subheader("This is my Todo App")
 
 
 # rasmni joylash
