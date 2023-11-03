@@ -12,7 +12,6 @@ st.title('Transportni klassifikatsiya qiluvchi model')
 st.subheader("Test dastur")
 st.write("Transportni klassifikatsiya qiluvchi dastur")
 
-
 # rasmni joylash
 file = st.file_uploader('Rasm yuklash', type=['png', 'jpeg', 'gif', 'svg'])
 if file:
