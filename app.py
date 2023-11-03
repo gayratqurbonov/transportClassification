@@ -1,17 +1,15 @@
 import streamlit as st
 from fastai.vision.all import *
+import pathlib
 import plotly.express as px
 import platform
-from pathlib import Path
 
-import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
-st.subheader("Test dastur")
-st.write("Transportni klassifikatsiya qiluvchi dastur")
+
 
 # rasmni joylash
 file = st.file_uploader('Rasm yuklash', type=['png', 'jpeg', 'gif', 'svg'])
