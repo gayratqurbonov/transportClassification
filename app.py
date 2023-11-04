@@ -3,6 +3,7 @@ from fastai.vision.all import *
 import pathlib
 import plotly.express as px
 import platform
+import pandas as pd
 
 plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
@@ -18,7 +19,7 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    model = px.load_learner('transport_model.pkl')
+    model = pd.load_learner('transport_model.pkl')
 
     # prediction
     pred, pred_id, probs=model.predict(img)
