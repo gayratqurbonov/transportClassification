@@ -7,6 +7,12 @@ import platform
 plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
+
+EXPORT_PATH = pathlib.Path("transport_model.pkl")
+
+with set_posix_windows():
+    learn_inf = load_learner(EXPORT_PATH)
+
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
 
