@@ -4,14 +4,6 @@ import pathlib
 import plotly.express as px
 import platform
 
-import torch
-import sys
-
-PATH = './gan.pth'
-
-model = torch.load(PATH)
-model.eval()
-
 plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
