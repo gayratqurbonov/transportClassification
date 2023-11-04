@@ -5,8 +5,8 @@ import plotly.express as px
 import platform
 import pandas as pd
 
-plt = platform.system()
-if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
 
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
