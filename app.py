@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
