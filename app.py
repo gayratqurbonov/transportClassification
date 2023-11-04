@@ -1,4 +1,3 @@
-import numpy as np
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
@@ -19,7 +18,7 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    model = np.data.learn.load('transport_model.pkl')
+    model = data.learn.load('transport_model.pkl')
 
     # prediction
     pred, pred_id, probs=model.predict(img)
