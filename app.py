@@ -22,7 +22,7 @@ if file:
     img = PILImage.create(file)
     # model
     dls = ImageDataLoaders.from_folder('transport_model.pkl', valid_pct=0.2, item_tfms=Resize(460), batch_tfms=[*aug_transforms(size=224), Normalize.from_stats(*imagenet_stats)])
-    # model = learn.export('transport_model.pkl')
+    model = dls.learn.export('transport_model.pkl')
     # model = data.load_learner('transport_model.pkl')
     # data = load_learner('transport_model.pkl')
 
