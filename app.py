@@ -5,7 +5,7 @@ import plotly.express as px
 import platform
 import pandas as pd
 
-
+plt = platform.system()
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 
