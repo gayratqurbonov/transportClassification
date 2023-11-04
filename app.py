@@ -4,6 +4,7 @@ import pathlib
 import plotly.express as px
 import platform
 import pandas as pd
+from fastai import load_learner
 
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
