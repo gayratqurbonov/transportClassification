@@ -6,7 +6,7 @@ import platform
 import pandas as pd
 
 plt = platform.system()
-# temp = pathlib.PosixPath
+temp = pathlib.PosixPath
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
@@ -20,8 +20,8 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    # model = data.load_learner('transport_model.pkl')
-    model = load_learner('transport_model.pkl')
+    model = data.load_learner('transport_model.pkl')
+    # model = load_learner('transport_model.pkl')
 
     # prediction
     pred, pred_id, probs=model.predict(img)
