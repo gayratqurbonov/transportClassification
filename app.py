@@ -5,9 +5,7 @@ import plotly.express as px
 import platform
 
 plt = platform.system()
-if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
-# plt = platform.system()
-# if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
@@ -20,8 +18,7 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    load_learner('transport_model.pkl')
-    # model = data.learn.load('transport_model.pkl')
+    model = data.learn.load('transport_model.pkl')
 
     # prediction
     pred, pred_id, probs=model.predict(img)
