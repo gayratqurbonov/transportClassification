@@ -6,8 +6,11 @@ import platform
 
 
 path = Path('train')
-plt = platform.system()
-if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+# plt = platform.system()
+# if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
 
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
