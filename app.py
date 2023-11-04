@@ -5,9 +5,7 @@ import platform
 import pathlib
 
 plt = platform.system()
-if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
-
-plt = platform.system()
+if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 elif plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
