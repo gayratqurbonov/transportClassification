@@ -6,7 +6,7 @@ import platform
 
 
 path = Path('train')
-# plt = platform.system()
+plt = platform.system()
 # if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 temp = pathlib.PosixPath
