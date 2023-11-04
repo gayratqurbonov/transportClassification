@@ -5,6 +5,8 @@ import plotly.express as px
 import platform
 from ipywidgets import widgets
 
+
+path = Path('train')
 plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
