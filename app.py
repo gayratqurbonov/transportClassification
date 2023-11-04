@@ -19,10 +19,12 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    model = pd.load_learner('transport_model.pkl')
+    # model = pd.load_learner('transport_model.pkl')
+    model = load_learner('transport_model.pkl')
 
     # prediction
-    pred, pred_id, probs=model.predict(img)
+    pred, pred_id, probs = model.predict(img)
+    # pred, pred_id, probs=model.predict(img)
     st.success(f"Bashorat: {pred}")
     st.info(f'Ehtimollik: {probs[pred_id]*100:.1f}%')
 
