@@ -3,11 +3,8 @@ from fastai.vision.all import *
 import pathlib
 import plotly.express as px
 import platform
-import pandas as pd
-
 
 plt = platform.system()
-temp = pathlib.PosixPath
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
@@ -21,9 +18,8 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    dls = ImageDataLoaders.from_folder('transport_model.pkl', valid_pct=0.2, item_tfms=Resize(460), batch_tfms=[*aug_transforms(size=224), Normalize.from_stats(*imagenet_stats)])
-    model = dls.learn.export('transport_model.pkl')
-    # model = data.load_learner('transport_model.pkl')
+    # model = dls.learn.export('transport_model.pkl')
+    model = data.load_learner('transport_model.pkl')
     # data = load_learner('transport_model.pkl')
 
     # prediction
