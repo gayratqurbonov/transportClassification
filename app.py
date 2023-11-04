@@ -2,11 +2,14 @@ import streamlit as st
 from fastai.vision.all import *
 import plotly.express as px
 import platform
-
 import pathlib
+
 plt = platform.system()
 if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+
+learn.save('first') -> Linux
+load_learner(path, 'first') -> Windows
 
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
