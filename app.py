@@ -3,7 +3,6 @@ from fastai.vision.all import *
 import pathlib
 import plotly.express as px
 import platform
-from ipywidgets import widgets
 
 
 path = Path('train')
