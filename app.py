@@ -20,7 +20,8 @@ if file:
     
     # model
     # model = data.load_learner('transport_model.pkl')
-    model = data.learn ('transport_model.pkl')
+    model = data.learn('transport_model.pkl')
+    
 
     # prediction
     pred, pred_id, probs=model.predict(img)
