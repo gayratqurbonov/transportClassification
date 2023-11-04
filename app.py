@@ -18,7 +18,6 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    learn = create_cnn(empty_data, models.resnet152)
     model = data.learn.load('transport_model.pkl')
 
     # prediction
