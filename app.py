@@ -19,7 +19,7 @@ if file:
     img = PILImage.create(file)
     
     # model
-    learn.export('transport_model.pkl')
+    load_learner.export('transport_model.pkl')
     # model = data.load_learner('transport_model.pkl')
     # data = load_learner('transport_model.pkl')
 
