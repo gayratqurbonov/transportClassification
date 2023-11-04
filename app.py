@@ -19,10 +19,7 @@ if file:
     img = PILImage.create(file)
     
     # model
-    # model = data.load_learner('transport_model.pkl')
-    # data = ImageDataLoaders.from_folder(img)
-    learn = cnn_learner(data, resnet34)
-    model = learn.load('transport_model.pkl')
+    model = data.load_learner('transport_model.pkl')
     
 
     # prediction
