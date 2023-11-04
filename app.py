@@ -5,7 +5,7 @@ import plotly.express as px
 import platform
 
 
-# path = Path('train')
+path = Path('train')
 plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
