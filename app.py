@@ -7,7 +7,7 @@ import pandas as pd
 
 plt = platform.system()
 temp = pathlib.PosixPath
-if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 
 # title
 st.title('Transportni klassifikatsiya qiluvchi model')
