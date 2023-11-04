@@ -18,7 +18,7 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    model = data.learn.load('transport_model.pkl')
+    model = file.learn.load('transport_model.pkl')
 
     # prediction
     pred, pred_id, probs=model.predict(img)
