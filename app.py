@@ -18,7 +18,7 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    model = load_learner('my_transport_model.pkl')
+    model = load_learner('transport_model.pkl')
     # model = data.load_learner('transport_model.pkl')
     # data = load_learner('transport_model.pkl')
 
