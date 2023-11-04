@@ -5,6 +5,7 @@ import plotly.express as px
 import platform
 import pandas as pd
 
+data = load_learner('', cpu=False)
 plt = platform.system()
 temp = pathlib.PosixPath
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
@@ -20,8 +21,8 @@ if file:
     # PIL convert
     img = PILImage.create(file)
     # model
-    # model = data.load_learner('transport_model.pkl')
-    data = load_learner('transport_model.pkl')
+    model = data.load_learner('transport_model.pkl')
+    # data = load_learner('transport_model.pkl')
 
     # prediction
     pred, pred_id, probs=model.predict(img)
